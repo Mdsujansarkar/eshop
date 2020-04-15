@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Brand;
 use Illuminate\Http\Request;
 
-class brandController extends Controller
+class BrandController extends Controller
 {
     public function index()
     {
@@ -30,7 +30,7 @@ class brandController extends Controller
     public function unpublishBrand($id)
     {
         $brand      = Brand::find($id);
-        $brand      ->publication_status    = 1;
+        $brand      ->publication_status    = 0;
         $brand      ->save();
         return redirect( '/brand/manage' )->with( 'message', 'Brand Name save' );
     }
@@ -38,7 +38,7 @@ class brandController extends Controller
     public function publishBrand($id)
     {
         $brand      = Brand::find($id);
-        $brand      ->publication_status    = 0;
+        $brand      ->publication_status    = 1;
         $brand      ->save();
         return redirect( '/brand/manage' )->with( 'message', 'Brand Name save' );
     }
@@ -56,12 +56,13 @@ class brandController extends Controller
         $brand      ->Delete();
         return redirect('/brand/manage')->with('message', 'Brand Name save' );
     }
+
     public function brandUpdate(Request $request)
     {
         $brand       = Brand::find($request->brand_id);
         $brand       ->brand_name             = $request     ->brand_name;
         $brand       ->brand_description      = $request     ->brand_description;
-        $brand       ->publication_status        = $request     ->publication_status;
+        $brand       ->publication_status     = $request     ->publication_status;
         $brand       ->save();
         return redirect( '/brand/manage' )->with( 'message', 'Brand Name save' );
     }

@@ -19,8 +19,7 @@ Route::get(  '/', 'HomeController@index');
  * Adminn panel controller
  */
 Route::get(  '/admin',                         'AdminController@index' );
-Route::get(  '/add-product',                   'AdminController@addProduct' )             ->name( 'add-product' );
-Route::get(  '/manage-product',                'AdminController@manageProduct' )          ->name( 'manage-product' );
+
 /**
  * Add categorie 
  */
@@ -36,11 +35,23 @@ Route::get(  '/catagory/delet/{id}',           'CategoryController@categoryDelet
  * Brand Product Section
  * @Brand
  */
-Route::get(  '/brand/add',                     'brandController@index')                   ->name( 'add-brand' );
-Route::get(  '/brand/manage',                  'brandController@manageBrand')             ->name( 'manage-brand' );
-Route::post( '/brand/save',                    'brandController@saveBrand')               ->name( 'new-brand' );
-Route::get(  '/brand/unpublish/{id}',          'brandController@unpublishBrand')          ->name( 'unpublish-brand' );
-Route::get(  '/brand/publish/{id}',            'brandController@publishBrand')            ->name( 'publish-brand' );
-Route::get(  '/brand/edit/{id}',               'brandController@brandEdit')               ->name( 'edit-brand' );
-Route::get(  '/brand/delete/{id}',             'brandController@brandDelete')             ->name( 'delete-brand' );
-Route::post( '/brand/update',                  'brandController@brandUpdate')             ->name( 'update-brand' );
+Route::get(  '/brand/add',                     'BrandController@index')                   ->name( 'add-brand' );
+Route::get(  '/brand/manage',                  'BrandController@manageBrand')             ->name( 'manage-brand' );
+Route::post( '/brand/save',                    'BrandController@saveBrand')               ->name( 'new-brand' );
+Route::get(  '/brand/unpublish/{id}',          'BrandController@unpublishBrand')          ->name( 'unpublish-brand' );
+Route::get(  '/brand/publish/{id}',            'BrandController@publishBrand')            ->name( 'publish-brand' );
+Route::get(  '/brand/edit/{id}',               'BrandController@brandEdit')               ->name( 'edit-brand' );
+Route::get(  '/brand/delete/{id}',             'BrandController@brandDelete')             ->name( 'delete-brand' );
+Route::post( '/brand/update',                  'BrandController@brandUpdate')             ->name( 'update-brand' );
+/**
+ * product route
+ * All product ate add
+ */
+Route::get(  '/product/add',                   'ProductController@addProduct')            ->name( 'add-product' );
+Route::get(  '/manage/product',                'ProductController@manageProduct')         ->name( 'manage-product' );
+Route::post( '/save/product',                  'ProductController@saveProduct')           ->name( 'save-product' );
+Route::get(  '/unpublish/product/{id}',        'ProductController@unpublishedProduct')    ->name( 'unpublish-product' );
+Route::get(  '/publish/product/{id}',          'ProductController@publishedProduct')      ->name( 'publish-product' );
+Route::get(  '/product/edit/{id}',             'ProductController@editProduct')           ->name( 'edit-product' );
+Route::post( '/product/update/',               'ProductController@updateProduct')         ->name( 'update-product' );
+Route::get(  '/product/delete/{id}',           'ProductController@deleteProduct')         ->name( 'delete-product' );
