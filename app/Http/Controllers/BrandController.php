@@ -59,6 +59,8 @@ class BrandController extends Controller
 
     public function brandUpdate(Request $request)
     {
+        $brand = $request->all();
+        return $brand;
         $brand       = Brand::find($request->brand_id);
         $brand       ->brand_name             = $request     ->brand_name;
         $brand       ->brand_description      = $request     ->brand_description;

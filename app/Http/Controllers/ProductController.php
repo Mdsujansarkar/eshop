@@ -31,16 +31,16 @@ class ProductController extends Controller
     protected function UploadImage($request)
     {
 
-        $producrImage       = $request          ->file( 'product_image' );
+        $productImage       = $request          ->file( 'product_image' );
         // $photo = $request->file('image')->getClientOriginalName();
-        $imageName          = $producrImage     ->getClientOriginalName();
+        $imageName          = $productImage     ->getClientOriginalName();
 
         // return $imageName;
         $directoryName      = 'product-imags/';
 
         $imageurl           = $directoryName . $imageName;
         // $productImages -> move( $directoryName,$imageName );
-        Image::make($producrImage)              ->save( $imageurl );
+        Image::make($productImage)              ->save( $imageurl );
         return $imageurl;
     }
 
@@ -74,7 +74,7 @@ class ProductController extends Controller
         $products = DB::table('products')
             ->join('categories', 'products.category_id', '=', 'categories.id')
             ->join('brands', 'products.brand_id', '=', 'brands.id')
-            ->select('products.*', 'categories.category_name', 'brands.id')
+            ->select('products.*', 'categories.category_name', 'brands.brand_name')
             ->get();
 
         return view('backend.product.manageProduct',['products' => $products]);
@@ -109,10 +109,34 @@ class ProductController extends Controller
             'brands'        => $brands
         ]);
     }
-
-    public function updateProduct()
+    public function productUpdateInfo($request, $product, $imageurl=null)
     {
-      echo "hello";  
+        
+        $product->category_id              = $request->category_id;
+        $product->brand_id                 = $request->brand_id;
+        $product->product_name             = $request->product_name;
+        $product->product_price            = $request->product_price;
+        $product->product_quantity         = $request->product_quantity;
+        $product->product_short_desc       = $request->product_short_desc;
+        $product->product_long_desc        = $request->product_long_desc;
+        if($imageurl){
+            $product->product_image        = $imageurl;
+        }
+        $product->publication_status       = $request->publication_status;
+        $product->save();
+    }
+    public function updateProduct(Request $request)
+    {
+      $productImage = $request->file('product_image');
+      $product = Product::find($request->product_id);
+      if($productImage) {
+            unlink($product->product_image);
+            $imageurl = $this->UploadImage($request);
+            $this->productUpdateInfo($request, $product, $imageurl);
+      }else{
+            $this->productUpdateInfo($request, $product);
+      }
+        return redirect('/manage/product')->with(' message', 'Message save');
     }
 
     public function deleteProduct($id)

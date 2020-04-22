@@ -4,17 +4,11 @@
     <main>
         <div class="container-fluid">
 
-            <form class="form-horizontal"  action="{{ route( 'update-product' )}}" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal"  name="editForms" action="{{ route( 'update-product' )}}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
                     <!-- Form Name -->
                     <legend>PRODUCTS</legend>
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="product_id">Product Name:</label>
-                        <div class="col-md-4">
-                            <input id="product_name" name="product_name" value="{{ $product->product_name}}" placeholder="Product Name" class="form-control input-md" required="" type="text">
-                        </div>
-                    </div>
+                    
                     <!-- Select Basic -->
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="product_categorie">Select Category</label>
@@ -38,7 +32,14 @@
                             </select>
                         </div>
                     </div>
-
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="product_id">Product Name:</label>
+                        <div class="col-md-4">
+                            <input id="product_name" name="product_name" value="{{ $product->product_name}}" placeholder="Product Name" class="form-control input-md" required="" type="text">
+                            <input type="hidden" value="{{$product->id}}" name="product_id" />
+                        </div>
+                    </div>
                     <!-- Text input-->
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="product_price">Product Price</label>
@@ -70,7 +71,9 @@
                     <div class="form-group">
                                 <label class="col-md-4 control-label" for="filebutton">Main Image</label>
                                 <div class="col-md-4">
-                                    <input id="filebutton" name="product_image" class="input-file" type="file">
+                                    <input id="filebutton" name="product_image" class="input-file" accept="image/*" type="file" />
+                                    <br />
+                                    <img src="{{asset( $product   ->product_image )}}" height="100" width="100" />
                                 </div>
                     </div>
                         <div class="form-group">
@@ -91,7 +94,7 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label" for="singlebutton">Product Insert</label>
                                 <div class="col-md-4">
-                                    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Product Save</button>
+                                    <input type="submit" id="singlebutton" name="singlebutton" value="submit" class="btn btn-primary" />
                             </div>
             </form>
 

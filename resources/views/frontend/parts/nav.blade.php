@@ -21,12 +21,9 @@
                                     <div class="multi-gd-img">
                                         <ul class="multi-column-dropdown">
                                             <h6>All Groceries</h6>
-                                            <li><a href="groceries.html">Dals & Pulses</a></li>
-                                            <li><a href="groceries.html">Almonds</a></li>
-                                            <li><a href="groceries.html">Cashews</a></li>
-                                            <li><a href="groceries.html">Dry Fruit</a></li>
-                                            <li><a href="groceries.html"> Mukhwas </a></li>
-                                            <li><a href="groceries.html">Rice & Rice Products</a></li>
+                                            @foreach( $categories as $categoriy )
+                                            <li><a href="{{ route( 'category-content' ) }}">{{$categoriy->category_name}}</a></li>
+                                            @endforeach
                                         </ul>
                                     </div>
 
