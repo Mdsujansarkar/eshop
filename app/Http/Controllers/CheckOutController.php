@@ -37,6 +37,7 @@ class CheckOutController extends Controller
             $message ->to($data['email_address']);
             $message ->subject('conform mail');
         });
+        return "success";
 
     	return redirect('/checkout/shipping');
     }
