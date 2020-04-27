@@ -9,25 +9,25 @@ class HomeController extends Controller
 {
     public function index() 
     {
-    	$categories		= Category::where( 'publication_status', 1 )
-    					->get();
     	$newProduct		= Product::where( 'publication_status', 1 )
     					->orderBy( 'id', 'DESC' )
     					->take(4)
     					->get();
     								
-        return view('frontend.home.home', ['categories'  => $categories, 'newProduct' => $newProduct]);
+        return view('frontend.home.home', ['newProduct' => $newProduct]);
     }
 
-    public function categoryProduct()
+    public function categoryProduct($id)
     {
-    	$categories		= Category::where( 'publication_status', 1 )
-    					->get();
-    	$newProduct		= Product::where( 'publication_status', 1 )
-    					->orderBy( 'id', 'DESC' )
-    					->take(4)
-    					->get();
-    	return view('frontend.category.categoryContent', ['categories'  => $categories, 'newProduct' => $newProduct]);
+    	$categoryProducts  = Product::where('category_id', $id)
+    					  ->where('publication_status', 1)
+    					  ->get();
+    	return view('frontend.category.categoryContent', ['categoryProducts' => $categoryProducts]);
 
+    }
+    public function productsDetaiils($id)
+    {
+    	$product = Product::find($id);
+    	return view('frontend.category.productDetail', ['product' => $product]);
     }
 }

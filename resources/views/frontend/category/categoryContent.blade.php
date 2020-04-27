@@ -21,20 +21,19 @@
 			<div class="col-md-8 products-right">
 				@include('frontend.category.categoryProductSetting')
 				<div class="agile_top_brands_grids">
-
+					@foreach($categoryProducts as $categoryProduct)
 					<div class="col-md-4 top_brand_left">
 						<div class="hover14 column">
 							<div class="agile_top_brand_left_grid">
-								<div class="agile_top_brand_left_grid_pos">
-									<img src="images/offer.png" alt=" " class="img-responsive">
-								</div>
+								
 								<div class="agile_top_brand_left_grid1">
 									<figure>
 										<div class="snipcart-item block">
 											<div class="snipcart-thumb">
-												<a href="single.html"><img title=" " alt=" " src="images/bv2.png"></a>		
-												<p>Frooti</p>
-												<h4>$35.99 <span>$55.00</span></h4>
+												<a href="{{ route('productsDetaiils', ['id' =>$categoryProduct->id, 'name' => $categoryProduct->product_name])}}">
+													<img title=" " height="300" width="250" src="{{asset($categoryProduct->product_image)}}"></a>		
+												<p>{{$categoryProduct->product_name}}</p>
+												<h4>{{$categoryProduct->product_price}} <span>$55.00</span></h4>
 											</div>
 											<div class="snipcart-details top_brand_home_details">
 												<form action="#" method="post">
@@ -58,7 +57,7 @@
 							</div>
 						</div>
 					</div>
-
+					@endforeach
 						<div class="clearfix"> </div>
 				</div>
 			

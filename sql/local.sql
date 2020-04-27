@@ -30,7 +30,7 @@ CREATE TABLE `brands` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,9 +39,6 @@ CREATE TABLE `brands` (
 
 LOCK TABLES `brands` WRITE;
 /*!40000 ALTER TABLE `brands` DISABLE KEYS */;
-INSERT INTO `brands` VALUES (1,'Bata','Sit Up Bench – Black and Red',1,'2020-04-20 02:55:32','2020-04-20 02:55:32');
-INSERT INTO `brands` VALUES (2,'Apex','anglicize it. How odd! Why would two intelligent people, each of whom spoke the other’s language well, do this? My own experiences with machine-translation software had always led me to be highly skeptical of it. But my skepticism was clearly not shared by these two. Indeed, many thoughtful people are quite enamored of translation programs, finding little to criticize in them. This baffles me.',1,'2020-04-20 02:56:06','2020-04-20 02:56:06');
-INSERT INTO `brands` VALUES (3,'Samsung','anglicize it. How odd! Why would two intelligent people, each of whom spoke the other’s language well, do this? My own experiences with machine-translation software had always led me to be highly skeptical of it. But my skepticism was clearly not shared by these two. Indeed, many thoughtful people are quite enamored of translation programs, finding little to criticize in them. This baffles me.',1,'2020-04-20 03:01:06','2020-04-20 03:01:06');
 /*!40000 ALTER TABLE `brands` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +57,7 @@ CREATE TABLE `categories` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,10 +66,37 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Fruits & Vegetables','\'Fake Bitcoin\' - How this Woman Scammed the World, then Vanished',1,'2020-04-20 02:42:46','2020-04-20 02:42:46');
-INSERT INTO `categories` VALUES (2,'Beverages','• Translate between 103 languages by typing\r\n• Tap to Translate: Copy text in any app and your translation pops up\r\n• Offline: Translate 59 languages when you have no Internet\r\n• Instant camera translation: Use your camera to translate text instantly in 38 languages\r\n• Camera Mode: Take pictures of text for higher-quality translations in 37 languages',1,'2020-04-20 02:43:20','2020-04-21 09:25:52');
-INSERT INTO `categories` VALUES (3,'Bread & Bakery','One Sunday, at one of our weekly salsa sessions, my friend Frank brought along a Danish guest. I knew Frank spoke Danish well, because his mother was Danish, and he had lived in Denmark as a child. As for his friend, her English was fluent, as is standard for Scandinavians. However, to my surprise, during the evening’s chitchat it emerge',1,'2020-04-20 02:48:52','2020-04-21 09:25:56');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `customers`
+--
+
+DROP TABLE IF EXISTS `customers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `customers` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone_number` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `address` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `customers`
+--
+
+LOCK TABLES `customers` WRITE;
+/*!40000 ALTER TABLE `customers` DISABLE KEYS */;
+/*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -114,7 +138,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,11 +147,12 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1);
-INSERT INTO `migrations` VALUES (2,'2019_08_19_000000_create_failed_jobs_table',1);
-INSERT INTO `migrations` VALUES (3,'2020_04_10_114555_creat_categories_table',1);
-INSERT INTO `migrations` VALUES (4,'2020_04_11_060428_creat_brands_table',1);
-INSERT INTO `migrations` VALUES (5,'2020_04_14_104141_create_products_table',1);
+INSERT INTO `migrations` VALUES (7,'2014_10_12_000000_create_users_table',1);
+INSERT INTO `migrations` VALUES (8,'2019_08_19_000000_create_failed_jobs_table',1);
+INSERT INTO `migrations` VALUES (9,'2020_04_10_114555_creat_categories_table',1);
+INSERT INTO `migrations` VALUES (10,'2020_04_11_060428_creat_brands_table',1);
+INSERT INTO `migrations` VALUES (11,'2020_04_14_104141_create_products_table',1);
+INSERT INTO `migrations` VALUES (12,'2020_04_26_132746_create_customers_table',1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +177,7 @@ CREATE TABLE `products` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -161,9 +186,6 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Quick View Sale! Sit Up Bench – Black and Red',1,2,5266.00,96,'hi','hello','product-imags/5.jpg',1,'2020-04-20 03:09:47','2020-04-21 10:03:08');
-INSERT INTO `products` VALUES (2,'ET-2515A Home Gym – Red & Black',3,2,6959.00,99,'Multi exercise home gym helps to tone up and increase your strength and muscle mass, increase your metabolic rate. Training your shoulders, breast, back, legs, abdomen and arms. Completely encased, greater protection and safety while exercising.Technical Points: ;Distance measurements ;Calories burned measurements ;Elapsed time measurements ;Speed measurements.','T-2515A Home Gym – Red and Black\r\n\r\nMulti exercise home gym helps to tone up and increase your strength and muscle mass, increase your metabolic rate. Training your shoulders, breast, back, legs, abdomen and arms.','product-imags/3.jpg',1,'2020-04-20 03:12:25','2020-04-20 03:12:25');
-INSERT INTO `products` VALUES (3,'HADE badminton racket',2,1,6569.00,99,'Be the first to review “HADE badminton racket”\r\nYour email address will not be published. Required fields are marked *','Be the first to review “HADE badminton racket”\r\nYour email address will not be published. Required fields are marked *','product-imags/tal.jpg',1,'2020-04-20 03:14:17','2020-04-20 03:14:17');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -206,4 +228,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-22  8:23:01
+-- Dump completed on 2020-04-26 22:20:19

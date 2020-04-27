@@ -9,7 +9,7 @@
                         <figure>
                             <div class="snipcart-item block">
                                 <div class="snipcart-thumb">
-                                    <a href="products.html">
+                                    <a href="{{route('productsDetaiils', ['id'=>$todayProduct->id,'name'=>$todayProduct->product_name])}}">
                                         <img title="{{ $todayProduct ->product_name}}" alt=" "  height="300" width="250" src="{{asset($todayProduct->product_image)}}" />
                                     </a>
                                     <p>{{ $todayProduct ->product_name}}</p>

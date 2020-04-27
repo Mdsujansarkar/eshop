@@ -22,7 +22,7 @@
                                         <ul class="multi-column-dropdown">
                                             <h6>All Groceries</h6>
                                             @foreach( $categories as $categoriy )
-                                            <li><a href="{{ route( 'category-content' ) }}">{{$categoriy->category_name}}</a></li>
+                                            <li><a href="{{ route( 'category-content', ['id' => $categoriy->id] ) }}">{{$categoriy->category_name}}</a></li>
                                             @endforeach
                                         </ul>
                                     </div>

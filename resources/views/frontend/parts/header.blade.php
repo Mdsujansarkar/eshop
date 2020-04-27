@@ -66,11 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </ul>
             </div>
             <div class="product_list_header">
-                <form action="#" method="post" class="last">
-                    <input type="hidden" name="cmd" value="_cart">
-                    <input type="hidden" name="display" value="1">
-                    <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-                </form>
+                <a href="{{route('add-to-show')}}" style="color:#FFFFFF; font-size:18px"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
             </div>
             <div class="clearfix"> </div>
         </div>

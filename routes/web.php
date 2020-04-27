@@ -15,7 +15,22 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get( '/', 								'HomeController@index');
-Route::get( '/category/product',				'HomeController@categoryProduct')		     ->name( 'category-content' );
+Route::get( '/category/product/{id}',			'HomeController@categoryProduct')		 ->name( 'category-content' );
+Route::get( '/product/details/{id}/{name}',		'HomeController@productsDetaiils')		 ->name( 'productsDetaiils' );
+
+
+Route::post( '/addToCart',						'CartController@addTocart')				 ->name( 'add-to-cart' );
+Route::get(  '/cart/show',						'CartController@addToCardShow')			 ->name( 'add-to-show' );
+Route::get(  '/cart/delete/{rowId}',			'CartController@deleteCart')			 ->name( 'delete-cart-item' );
+Route::post( '/cart/update',					'CartController@updateCart')			 ->name( 'cart-update' );
+
+
+
+/**
+ * Customer Check out
+ */
+Route::get( '/customer/check/out',				'CheckOutController@index')				 ->name( 'CustomercheckOut' );
+Route::post( '/customer/checkout',				'CheckOutController@checkoutProduct')	 ->name( 'customer-chechout' );
 
 /**
  * Adminn panel controller
