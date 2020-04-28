@@ -75,11 +75,21 @@
                         <li>Iteam Total(TK. ) <i>-</i> <span>{{$sum}} </span></li>
                         <li>Vat(TK. ) <i>-</i> <span>{{$vat = 0}} </span></li>
             
-                        <li>Total(TK. ) <i>-</i> <span><b>{{ $sum+$vat}}</b></span></li>
+                        <li>Total(TK. ) <i>-</i> <span><b>{{ $orderTotal = $sum+$vat}}</b></span></li>
+                        <?php 
+                            Session::put('orderTotal', $orderTotal);
+                        ?>
                     </ul>
                 </div>
                 <div class="checkout-right-basket" style="margin-left:5px">
-                    <a href="{{ route('CustomercheckOut')}}"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Chack Out</a>
+                    @if( Session::get('customrId') && Session::get('shippingId'))
+                    <a href="{{ route('shopping-payment')}}"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Chack Out1</a>
+                    @elseif( Session::get('customrId'))
+                        <a href="{{ route('CustomercheckOut')}}"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Chack Out2</a>
+                    @else
+                    <a href="{{ route('CustomercheckOut')}}"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Chack Out3</a>
+                    @endif
+
                 </div>
                 <div class="checkout-right-basket">
                     <a href="single.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>

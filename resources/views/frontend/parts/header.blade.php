@@ -60,7 +60,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="agile-login">
                 <ul>
                     <li><a href="registered.html"> Create Account </a></li>
-                    <li><a href="login.html">Login</a></li>
+                        @if(Session::get('customerId'))
+                    <li><a href="login.html" onclick="document.getElementById('customerLogotFrom').submit(); " >Logout</a></li>
+                    <form id="customerLogotFrom"  action="{{route('customer-logout')}}" method="post">
+                        
+                    </form>
+                        @endif
+                    <li><a href="{{route('new-customer-login')}}">Login</a></li>
+
                     <li><a href="contact.html">Help</a></li>
 
                 </ul>

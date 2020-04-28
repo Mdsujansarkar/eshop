@@ -17,6 +17,7 @@
 	<div class="register">
 		<div class="container" >
 			<h2>Register Here</h2>
+			<h4 class="text-center">{{ Session::get('message')}}</h4>
 			<div class="login-form-grids w3_agileits_contact_grid_left textarea" style="float: left; overflow: hidden;">
 				
 				<h6>Registration information</h6>
@@ -33,7 +34,8 @@
 			</div>
 			<div class="login-form-grids" style="overflow: hidden;">
 				<h6>Login information</h6>
-					<form action="#" method="post">
+				<form action="{{route('login-info-customer')}}" method="post">
+					@csrf
 					<input type="email" name="email_address"placeholder="Email Address" required=" " >
 					<input type="password" name="password"  placeholder="Password" required=" " >
 					<input type="submit" name="btn" value="Login">
