@@ -30,13 +30,16 @@ Route::post( '/cart/update',					'CartController@updateCart')			 ->name( 'cart-u
  * Customer Check out
  */
 Route::get(  '/customer/check/out',				'CheckOutController@index')				 ->name( 'CustomercheckOut' );
-Route::post( '/customer/checkout',				'CheckOutController@checkoutProduct')	 ->name( 'customer-chechout' );
+// Route::post( '/customer/checkout',				'CheckOutController@checkoutProduct')	 ->name( 'customer-chechout' );
+Route::post( '/customer/registration',				'CheckOutController@customerSignUp')	 ->name( 'customer-sign-up' );
+
 Route::get(  '/checkout/shipping',			    'CheckOutController@customerShopping')   ->name( 'customer-shopping' );
 Route::post( '/shopping/info',					'CheckOutController@customerAddress')	 ->name( 'new-shipping-info' );
 Route::get(  '/checkout/payment',				'CheckOutController@shoppingPayment')	 ->name( 'shopping-payment' );
 Route::post( '/order/confarm',					'CheckOutController@orderConform')		 ->name( 'payment-confarm' );
 Route::get(	 '/order/complite',					'CheckOutController@orderComplite')		 ->name( 'order-complite' );
-Route::post( '/checkout/shipping',				'CheckOutController@customerLogin')		 ->name( 'login-info-customer' );
+// Route::post( '/checkout/shipping',				'CheckOutController@customerLogin')		 ->name( 'login-info-customer' );
+Route::post( '/checkout/customer/login',				'CheckOutController@customerLogin')		 ->name( 'customer-login' );
 Route::post( '/customer/logout',				'CheckOutController@customerLogout')	 ->name( 'customer-logout' );
 Route::get(  '/customer/login',					'CheckOutController@customerLoginNew')	 	 ->name( 'new-customer-login' );
 

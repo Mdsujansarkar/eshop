@@ -60,15 +60,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="agile-login">
                 <ul>
                     <li><a href="registered.html"> Create Account </a></li>
-                        @if(Session::get('customerId'))
-                    <li><a href="login.html" onclick="document.getElementById('customerLogotFrom').submit(); " >Logout</a></li>
+                        @if(Session::get('customrId'))
+                    <li><a href="#" onclick="document.getElementById('customerLogotFrom').submit(); " >Logout</a></li>
                     <form id="customerLogotFrom"  action="{{route('customer-logout')}}" method="post">
+                        @csrf
                         
                     </form>
                         @endif
                     <li><a href="{{route('new-customer-login')}}">Login</a></li>
-
-                    <li><a href="contact.html">Help</a></li>
 
                 </ul>
             </div>
@@ -88,7 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </ul>
             </div>
             <div class="w3ls_logo_products_left">
-                <h1><a href="index.html">super Market</a></h1>
+                <h1><a href="{{ url('/')}}">super Market</a></h1>
             </div>
             <div class="w3l_search">
                 <form action="#" method="post">

@@ -22,7 +22,7 @@ class CheckOutController extends Controller
     {
         return view('frontend.checkout.checkout');
     }
-    public function checkoutProduct(Request $request)
+    public function customerSignUp(Request $request)
     {
     	$customer  = new Customer();
     	$customer  -> first_name  		= $request 			->first_name;
@@ -73,7 +73,7 @@ class CheckOutController extends Controller
 
         if (password_verify($request->password, $customer->password)) {
 
-            Session::put('customerId', $customer->id);
+            Session::put('customrId', $customer->id);
 
             Session::put('customerName',$customer->first_name. ' '.$customer->last_name);
 
@@ -81,7 +81,7 @@ class CheckOutController extends Controller
 
         } else {
 
-            return redirect('/shopping/info')->with('message',"password or email address are not metch");
+            return redirect('/customer/login')->with('message',"password or email address are not metch");
         }
     }
 
@@ -132,7 +132,7 @@ class CheckOutController extends Controller
 
     public function customerLogout()
     {
-        Session::forget('customerId');
+        Session::forget('customrId');
         Session::forget('customerName');
 
         return redirect('/');
@@ -140,7 +140,7 @@ class CheckOutController extends Controller
 
     public function customerLoginNew()
     {
-        return view('frontend.checkout.checkout');
+        return view('frontend.checkout.new-login-customer');
 
     }
 }

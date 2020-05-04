@@ -91,7 +91,7 @@ CREATE TABLE `customers` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,6 +101,10 @@ CREATE TABLE `customers` (
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
 INSERT INTO `customers` VALUES (1,'fdsfd','dsfdsf','asdf@rfdg.tgjhg','$2y$10$MQA6OQhHbaSUAXVtsIDa2emAeMISTvycLd160/VzwRLMPsMWjNLT6','6546846','ffdsfds df','2020-04-28 03:22:33','2020-04-28 03:22:33');
+INSERT INTO `customers` VALUES (2,'gdfds','fdsfds','s@s.com','$2y$10$OmnEH1CusCAYP/W0YHLtX.Hu2Pk54HSgLGAB.f.vScaOiGSEqQ79C','54665','dfgf','2020-04-28 04:25:28','2020-04-28 04:25:28');
+INSERT INTO `customers` VALUES (3,'gdfds','fdsfds','s@s.com','$2y$10$foqhTXv9wwZtUtRQ7bz9Yuddgg423.bOeL/BbbT3Bcd9/Gy6//rM.','54665','dfgf','2020-04-28 04:43:56','2020-04-28 04:43:56');
+INSERT INTO `customers` VALUES (4,'dsfds','fgfdfgf','hjjh@jhj.vo','$2y$10$A..xMxUn6N/E56gd9E4JK.bU8LhDe6v/APho5iiEOfZiPeV22nntK','8954564','jijhkl','2020-04-28 06:53:36','2020-04-28 06:53:36');
+INSERT INTO `customers` VALUES (5,'tt','fttrfy','asdf@rfdg.tgjhg','$2y$10$QtlcxGoNj0pbV1/Bkwp5S.5/w6hWoDgr0F61FcK/4r0VMMbpUMFWK','6546565','ghjghjgh','2020-04-28 09:08:22','2020-04-28 09:08:22');
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -181,7 +185,7 @@ CREATE TABLE `orders` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -193,6 +197,7 @@ LOCK TABLES `orders` WRITE;
 INSERT INTO `orders` VALUES (1,32,2,465.00,'panding','2020-04-27 19:20:35','2020-04-27 19:20:35');
 INSERT INTO `orders` VALUES (2,32,2,465.00,'panding','2020-04-27 19:21:32','2020-04-27 19:21:32');
 INSERT INTO `orders` VALUES (3,32,2,4733.00,'panding','2020-04-27 22:25:13','2020-04-27 22:25:13');
+INSERT INTO `orders` VALUES (4,3,1,853.00,'panding','2020-04-28 04:44:06','2020-04-28 04:44:06');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -213,7 +218,7 @@ CREATE TABLE `orders_details` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,6 +230,7 @@ LOCK TABLES `orders_details` WRITE;
 INSERT INTO `orders_details` VALUES (1,2,1,'dsfdsfds',465.00,1,'2020-04-27 19:21:32','2020-04-27 19:21:32');
 INSERT INTO `orders_details` VALUES (2,3,3,'computer',853.00,5,'2020-04-27 22:25:13','2020-04-27 22:25:13');
 INSERT INTO `orders_details` VALUES (3,3,1,'test hello',234.00,2,'2020-04-27 22:25:13','2020-04-27 22:25:13');
+INSERT INTO `orders_details` VALUES (4,4,3,'computer',853.00,1,'2020-04-28 04:44:06','2020-04-28 04:44:06');
 /*!40000 ALTER TABLE `orders_details` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -243,7 +249,7 @@ CREATE TABLE `payments` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -255,6 +261,7 @@ LOCK TABLES `payments` WRITE;
 INSERT INTO `payments` VALUES (1,1,'Cash','pending','2020-04-27 19:20:35','2020-04-27 19:20:35');
 INSERT INTO `payments` VALUES (2,2,'Cash','pending','2020-04-27 19:21:32','2020-04-27 19:21:32');
 INSERT INTO `payments` VALUES (3,3,'Cash','pending','2020-04-27 22:25:13','2020-04-27 22:25:13');
+INSERT INTO `payments` VALUES (4,4,'Cash','pending','2020-04-28 04:44:06','2020-04-28 04:44:06');
 /*!40000 ALTER TABLE `payments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -311,7 +318,7 @@ CREATE TABLE `shoppings` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -320,6 +327,9 @@ CREATE TABLE `shoppings` (
 
 LOCK TABLES `shoppings` WRITE;
 /*!40000 ALTER TABLE `shoppings` DISABLE KEYS */;
+INSERT INTO `shoppings` VALUES (1,'gdfds','fdsfds','s@s.com','54665','dfgf','2020-04-28 04:44:00','2020-04-28 04:44:00');
+INSERT INTO `shoppings` VALUES (2,'tt','fttrfy','asdf@rfdg.tgjhg','6546565','ghjghjgh','2020-04-28 09:11:59','2020-04-28 09:11:59');
+INSERT INTO `shoppings` VALUES (3,'tt','fttrfy','asdf@rfdg.tgjhg','6546565','ghjghjgh','2020-04-28 09:23:16','2020-04-28 09:23:16');
 /*!40000 ALTER TABLE `shoppings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -362,4 +372,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-28 15:23:09
+-- Dump completed on 2020-05-04 10:50:08
