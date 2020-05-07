@@ -91,7 +91,7 @@ CREATE TABLE `customers` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,6 +105,9 @@ INSERT INTO `customers` VALUES (2,'gdfds','fdsfds','s@s.com','$2y$10$OmnEH1CusCA
 INSERT INTO `customers` VALUES (3,'gdfds','fdsfds','s@s.com','$2y$10$foqhTXv9wwZtUtRQ7bz9Yuddgg423.bOeL/BbbT3Bcd9/Gy6//rM.','54665','dfgf','2020-04-28 04:43:56','2020-04-28 04:43:56');
 INSERT INTO `customers` VALUES (4,'dsfds','fgfdfgf','hjjh@jhj.vo','$2y$10$A..xMxUn6N/E56gd9E4JK.bU8LhDe6v/APho5iiEOfZiPeV22nntK','8954564','jijhkl','2020-04-28 06:53:36','2020-04-28 06:53:36');
 INSERT INTO `customers` VALUES (5,'tt','fttrfy','asdf@rfdg.tgjhg','$2y$10$QtlcxGoNj0pbV1/Bkwp5S.5/w6hWoDgr0F61FcK/4r0VMMbpUMFWK','6546565','ghjghjgh','2020-04-28 09:08:22','2020-04-28 09:08:22');
+INSERT INTO `customers` VALUES (6,'dsfds','dfdsfd','dsfdd@asd.com','$2y$10$iramHOJpuQwYdY38DVSabOoDF5dBsADaA940zAY1FUOHjntdR3KmS','15964665','hi','2020-05-04 06:58:23','2020-05-04 06:58:23');
+INSERT INTO `customers` VALUES (7,'Sujan','Miya','sujan@miya.com','$2y$10$ZyKMojQyrVgieTnu0zntV.Y9T.4UqkvJvMxc5P14gVsMyZB0wF7ue','41478966363','Hello sujan','2020-05-04 07:42:00','2020-05-04 07:42:00');
+INSERT INTO `customers` VALUES (8,'sujan','Miya','sujan@miya.com','$2y$10$jcoW6N5oZlVRkhDeyfb7EeHsKC2ndI48W6bTuLZGkZT76J452ugg.','786798','df','2020-05-06 10:22:40','2020-05-06 10:22:40');
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -185,7 +188,7 @@ CREATE TABLE `orders` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -198,6 +201,12 @@ INSERT INTO `orders` VALUES (1,32,2,465.00,'panding','2020-04-27 19:20:35','2020
 INSERT INTO `orders` VALUES (2,32,2,465.00,'panding','2020-04-27 19:21:32','2020-04-27 19:21:32');
 INSERT INTO `orders` VALUES (3,32,2,4733.00,'panding','2020-04-27 22:25:13','2020-04-27 22:25:13');
 INSERT INTO `orders` VALUES (4,3,1,853.00,'panding','2020-04-28 04:44:06','2020-04-28 04:44:06');
+INSERT INTO `orders` VALUES (5,6,4,4275.00,'panding','2020-05-04 06:58:33','2020-05-04 06:58:33');
+INSERT INTO `orders` VALUES (6,2,5,1089.00,'panding','2020-05-04 07:40:12','2020-05-04 07:40:12');
+INSERT INTO `orders` VALUES (7,7,6,2561.00,'panding','2020-05-04 07:42:06','2020-05-04 07:42:06');
+INSERT INTO `orders` VALUES (8,8,9,853.00,'panding','2020-05-06 10:22:51','2020-05-06 10:22:51');
+INSERT INTO `orders` VALUES (9,8,9,855.00,'panding','2020-05-06 10:29:16','2020-05-06 10:29:16');
+INSERT INTO `orders` VALUES (10,8,9,1089.00,'panding','2020-05-06 10:30:52','2020-05-06 10:30:52');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -218,7 +227,7 @@ CREATE TABLE `orders_details` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -231,6 +240,15 @@ INSERT INTO `orders_details` VALUES (1,2,1,'dsfdsfds',465.00,1,'2020-04-27 19:21
 INSERT INTO `orders_details` VALUES (2,3,3,'computer',853.00,5,'2020-04-27 22:25:13','2020-04-27 22:25:13');
 INSERT INTO `orders_details` VALUES (3,3,1,'test hello',234.00,2,'2020-04-27 22:25:13','2020-04-27 22:25:13');
 INSERT INTO `orders_details` VALUES (4,4,3,'computer',853.00,1,'2020-04-28 04:44:06','2020-04-28 04:44:06');
+INSERT INTO `orders_details` VALUES (5,5,2,'What is Lorem Ipsum?',855.00,5,'2020-05-04 06:58:33','2020-05-04 06:58:33');
+INSERT INTO `orders_details` VALUES (6,6,1,'test hello',234.00,1,'2020-05-04 07:40:12','2020-05-04 07:40:12');
+INSERT INTO `orders_details` VALUES (7,6,2,'What is Lorem Ipsum?',855.00,1,'2020-05-04 07:40:12','2020-05-04 07:40:12');
+INSERT INTO `orders_details` VALUES (8,7,2,'What is Lorem Ipsum?',855.00,1,'2020-05-04 07:42:06','2020-05-04 07:42:06');
+INSERT INTO `orders_details` VALUES (9,7,3,'computer',853.00,2,'2020-05-04 07:42:06','2020-05-04 07:42:06');
+INSERT INTO `orders_details` VALUES (10,8,3,'computer',853.00,1,'2020-05-06 10:22:52','2020-05-06 10:22:52');
+INSERT INTO `orders_details` VALUES (11,9,2,'What is Lorem Ipsum?',855.00,1,'2020-05-06 10:29:16','2020-05-06 10:29:16');
+INSERT INTO `orders_details` VALUES (12,10,1,'test hello',234.00,1,'2020-05-06 10:30:52','2020-05-06 10:30:52');
+INSERT INTO `orders_details` VALUES (13,10,2,'What is Lorem Ipsum?',855.00,1,'2020-05-06 10:30:52','2020-05-06 10:30:52');
 /*!40000 ALTER TABLE `orders_details` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -249,7 +267,7 @@ CREATE TABLE `payments` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -262,6 +280,12 @@ INSERT INTO `payments` VALUES (1,1,'Cash','pending','2020-04-27 19:20:35','2020-
 INSERT INTO `payments` VALUES (2,2,'Cash','pending','2020-04-27 19:21:32','2020-04-27 19:21:32');
 INSERT INTO `payments` VALUES (3,3,'Cash','pending','2020-04-27 22:25:13','2020-04-27 22:25:13');
 INSERT INTO `payments` VALUES (4,4,'Cash','pending','2020-04-28 04:44:06','2020-04-28 04:44:06');
+INSERT INTO `payments` VALUES (5,5,'Cash','pending','2020-05-04 06:58:33','2020-05-04 06:58:33');
+INSERT INTO `payments` VALUES (6,6,'Cash','pending','2020-05-04 07:40:12','2020-05-04 07:40:12');
+INSERT INTO `payments` VALUES (7,7,'Cash','pending','2020-05-04 07:42:06','2020-05-04 07:42:06');
+INSERT INTO `payments` VALUES (8,8,'Cash','pending','2020-05-06 10:22:51','2020-05-06 10:22:51');
+INSERT INTO `payments` VALUES (9,9,'Cash','pending','2020-05-06 10:29:16','2020-05-06 10:29:16');
+INSERT INTO `payments` VALUES (10,10,'Cash','pending','2020-05-06 10:30:52','2020-05-06 10:30:52');
 /*!40000 ALTER TABLE `payments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -318,7 +342,7 @@ CREATE TABLE `shoppings` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -330,6 +354,12 @@ LOCK TABLES `shoppings` WRITE;
 INSERT INTO `shoppings` VALUES (1,'gdfds','fdsfds','s@s.com','54665','dfgf','2020-04-28 04:44:00','2020-04-28 04:44:00');
 INSERT INTO `shoppings` VALUES (2,'tt','fttrfy','asdf@rfdg.tgjhg','6546565','ghjghjgh','2020-04-28 09:11:59','2020-04-28 09:11:59');
 INSERT INTO `shoppings` VALUES (3,'tt','fttrfy','asdf@rfdg.tgjhg','6546565','ghjghjgh','2020-04-28 09:23:16','2020-04-28 09:23:16');
+INSERT INTO `shoppings` VALUES (4,'dsfds','dfdsfd','dsfdd@asd.com','15964665','hi','2020-05-04 06:58:27','2020-05-04 06:58:27');
+INSERT INTO `shoppings` VALUES (5,'gdfds','fdsfds','s@s.com','54665','dfgf','2020-05-04 07:39:59','2020-05-04 07:39:59');
+INSERT INTO `shoppings` VALUES (6,'Sujan','Miya','sujan@miya.com','41478966363','Hello sujan','2020-05-04 07:42:03','2020-05-04 07:42:03');
+INSERT INTO `shoppings` VALUES (7,'Sujan','Miya','sujan@miya.com','41478966363','Hello sujan','2020-05-04 07:43:03','2020-05-04 07:43:03');
+INSERT INTO `shoppings` VALUES (8,'Sujan','Miya 252','sujan@miya.com','41478966363','Hello sujan','2020-05-04 07:51:09','2020-05-04 07:51:09');
+INSERT INTO `shoppings` VALUES (9,'sujan','Miya 252','sujan@miya.com','786798','df','2020-05-06 10:22:48','2020-05-06 10:22:48');
 /*!40000 ALTER TABLE `shoppings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -372,4 +402,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-04 10:50:08
+-- Dump completed on 2020-05-07 11:40:08

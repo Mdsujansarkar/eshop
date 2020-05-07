@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b61f1d17bcf5ea4c8865a95419a81cca",
+    "content-hash": "6d77c3f537efdac347c9c1791d0f09d3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -57,6 +57,62 @@
                 "stack"
             ],
             "time": "2019-12-24T22:41:47+00:00"
+        },
+        {
+            "name": "barryvdh/laravel-dompdf",
+            "version": "v0.8.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-dompdf.git",
+                "reference": "d7108f78cf5254a2d8c224542967f133e5a6d4e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-dompdf/zipball/d7108f78cf5254a2d8c224542967f133e5a6d4e8",
+                "reference": "d7108f78cf5254a2d8c224542967f133e5a6d4e8",
+                "shasum": ""
+            },
+            "require": {
+                "dompdf/dompdf": "^0.8",
+                "illuminate/support": "^5.5|^6|^7",
+                "php": ">=7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.8-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Barryvdh\\DomPDF\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "PDF": "Barryvdh\\DomPDF\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\DomPDF\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "A DOMPDF Wrapper for Laravel",
+            "keywords": [
+                "dompdf",
+                "laravel",
+                "pdf"
+            ],
+            "time": "2020-02-25T20:44:34+00:00"
         },
         {
             "name": "brick/math",
@@ -331,6 +387,72 @@
                 "php"
             ],
             "time": "2019-10-30T14:39:59+00:00"
+        },
+        {
+            "name": "dompdf/dompdf",
+            "version": "v0.8.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dompdf/dompdf.git",
+                "reference": "6782abfc090b132134cd6cea0ec6d76f0fce2c56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/6782abfc090b132134cd6cea0ec6d76f0fce2c56",
+                "reference": "6782abfc090b132134cd6cea0ec6d76f0fce2c56",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-mbstring": "*",
+                "phenx/php-font-lib": "^0.5.1",
+                "phenx/php-svg-lib": "^0.3.3",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "suggest": {
+                "ext-gd": "Needed to process images",
+                "ext-gmagick": "Improves image processing performance",
+                "ext-imagick": "Improves image processing performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dompdf\\": "src/"
+                },
+                "classmap": [
+                    "lib/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                },
+                {
+                    "name": "Brian Sweeney",
+                    "email": "eclecticgeek@gmail.com"
+                },
+                {
+                    "name": "Gabriel Bull",
+                    "email": "me@gabrielbull.com"
+                }
+            ],
+            "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
+            "homepage": "https://github.com/dompdf/dompdf",
+            "time": "2020-02-20T03:52:51+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -1042,6 +1164,61 @@
             "time": "2020-04-07T15:01:31+00:00"
         },
         {
+            "name": "laravel/ui",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "15368c5328efb7ce94f35ca750acde9b496ab1b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/15368c5328efb7ce94f35ca750acde9b496ab1b1",
+                "reference": "15368c5328efb7ce94f35ca750acde9b496ab1b1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^7.0",
+                "illuminate/filesystem": "^7.0",
+                "illuminate/support": "^7.0",
+                "php": "^7.2.5"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "time": "2020-04-29T15:06:45+00:00"
+        },
+        {
             "name": "league/commonmark",
             "version": "1.4.1",
             "source": {
@@ -1463,6 +1640,83 @@
                 "serialize"
             ],
             "time": "2019-11-29T22:36:02+00:00"
+        },
+        {
+            "name": "phenx/php-font-lib",
+            "version": "0.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhenX/php-font-lib.git",
+                "reference": "ca6ad461f032145fff5971b5985e5af9e7fa88d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhenX/php-font-lib/zipball/ca6ad461f032145fff5971b5985e5af9e7fa88d8",
+                "reference": "ca6ad461f032145fff5971b5985e5af9e7fa88d8",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5 || ^6 || ^7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FontLib\\": "src/FontLib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                }
+            ],
+            "description": "A library to read, parse, export and make subsets of different types of font files.",
+            "homepage": "https://github.com/PhenX/php-font-lib",
+            "time": "2020-03-08T15:31:32+00:00"
+        },
+        {
+            "name": "phenx/php-svg-lib",
+            "version": "v0.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhenX/php-svg-lib.git",
+                "reference": "5fa61b65e612ce1ae15f69b3d223cb14ecc60e32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhenX/php-svg-lib/zipball/5fa61b65e612ce1ae15f69b3d223cb14ecc60e32",
+                "reference": "5fa61b65e612ce1ae15f69b3d223cb14ecc60e32",
+                "shasum": ""
+            },
+            "require": {
+                "sabberworm/php-css-parser": "^8.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.5|^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Svg\\": "src/Svg"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                }
+            ],
+            "description": "A library to read, parse and export to PDF SVG files.",
+            "homepage": "https://github.com/PhenX/php-svg-lib",
+            "time": "2019-09-11T20:02:13+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -2012,6 +2266,51 @@
                 "uuid"
             ],
             "time": "2020-03-29T20:13:32+00:00"
+        },
+        {
+            "name": "sabberworm/php-css-parser",
+            "version": "8.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sabberworm/PHP-CSS-Parser.git",
+                "reference": "91bcc3e3fdb7386c9a2e0e0aa09ca75cc43f121f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sabberworm/PHP-CSS-Parser/zipball/91bcc3e3fdb7386c9a2e0e0aa09ca75cc43f121f",
+                "reference": "91bcc3e3fdb7386c9a2e0e0aa09ca75cc43f121f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "codacy/coverage": "^1.4",
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Sabberworm\\CSS": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphael Schweikert"
+                }
+            ],
+            "description": "Parser for CSS Files written in PHP",
+            "homepage": "http://www.sabberworm.com/blog/2010/6/10/php-css-parser",
+            "keywords": [
+                "css",
+                "parser",
+                "stylesheet"
+            ],
+            "time": "2019-02-22T07:42:52+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3681,6 +3980,49 @@
             "time": "2019-10-21T16:45:58+00:00"
         },
         {
+            "name": "evenement/evenement",
+            "version": "v3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/igorw/evenement.git",
+                "reference": "531bfb9d15f8aa57454f5f0285b18bec903b8fb7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/igorw/evenement/zipball/531bfb9d15f8aa57454f5f0285b18bec903b8fb7",
+                "reference": "531bfb9d15f8aa57454f5f0285b18bec903b8fb7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Evenement": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                }
+            ],
+            "description": "Événement is a very simple event dispatching library for PHP",
+            "keywords": [
+                "event-dispatcher",
+                "event-emitter"
+            ],
+            "time": "2017-07-23T21:35:13+00:00"
+        },
+        {
             "name": "facade/flare-client-php",
             "version": "1.3.2",
             "source": {
@@ -4904,6 +5246,325 @@
             "time": "2020-04-23T04:39:42+00:00"
         },
         {
+            "name": "react/cache",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/cache.git",
+                "reference": "aa10d63a1b40a36a486bdf527f28bac607ee6466"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/cache/zipball/aa10d63a1b40a36a486bdf527f28bac607ee6466",
+                "reference": "aa10d63a1b40a36a486bdf527f28bac607ee6466",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "react/promise": "~2.0|~1.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Async, Promise-based cache interface for ReactPHP",
+            "keywords": [
+                "cache",
+                "caching",
+                "promise",
+                "reactphp"
+            ],
+            "time": "2019-07-11T13:45:28+00:00"
+        },
+        {
+            "name": "react/dns",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/dns.git",
+                "reference": "a214d90c2884dac18d0cac6176202f247b66d762"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/dns/zipball/a214d90c2884dac18d0cac6176202f247b66d762",
+                "reference": "a214d90c2884dac18d0cac6176202f247b66d762",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "react/cache": "^1.0 || ^0.6 || ^0.5",
+                "react/event-loop": "^1.0 || ^0.5",
+                "react/promise": "^2.7 || ^1.2.1",
+                "react/promise-timer": "^1.2"
+            },
+            "require-dev": {
+                "clue/block-react": "^1.2",
+                "phpunit/phpunit": "^7.0 || ^6.4 || ^5.7 || ^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Dns\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Async DNS resolver for ReactPHP",
+            "keywords": [
+                "async",
+                "dns",
+                "dns-resolver",
+                "reactphp"
+            ],
+            "time": "2019-08-15T09:06:31+00:00"
+        },
+        {
+            "name": "react/event-loop",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/event-loop.git",
+                "reference": "6d24de090cd59cfc830263cfba965be77b563c13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/6d24de090cd59cfc830263cfba965be77b563c13",
+                "reference": "6d24de090cd59cfc830263cfba965be77b563c13",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0 || ^6.4 || ^5.7 || ^4.8.35"
+            },
+            "suggest": {
+                "ext-event": "~1.0 for ExtEventLoop",
+                "ext-pcntl": "For signal handling support when using the StreamSelectLoop",
+                "ext-uv": "* for ExtUvLoop"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\EventLoop\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "ReactPHP's core reactor event loop that libraries can use for evented I/O.",
+            "keywords": [
+                "asynchronous",
+                "event-loop"
+            ],
+            "time": "2020-01-01T18:39:52+00:00"
+        },
+        {
+            "name": "react/promise",
+            "version": "v2.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "31ffa96f8d2ed0341a57848cbb84d88b89dd664d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/31ffa96f8d2ed0341a57848cbb84d88b89dd664d",
+                "reference": "31ffa96f8d2ed0341a57848cbb84d88b89dd664d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "keywords": [
+                "promise",
+                "promises"
+            ],
+            "time": "2019-01-07T21:25:54+00:00"
+        },
+        {
+            "name": "react/promise-timer",
+            "version": "v1.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise-timer.git",
+                "reference": "35fb910604fd86b00023fc5cda477c8074ad0abc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise-timer/zipball/35fb910604fd86b00023fc5cda477c8074ad0abc",
+                "reference": "35fb910604fd86b00023fc5cda477c8074ad0abc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3.5",
+                "react/promise": "^2.7.0 || ^1.2.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Promise\\Timer\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@lueck.tv"
+                }
+            ],
+            "description": "A trivial implementation of timeouts for Promises, built on top of ReactPHP.",
+            "homepage": "https://github.com/reactphp/promise-timer",
+            "keywords": [
+                "async",
+                "event-loop",
+                "promise",
+                "reactphp",
+                "timeout",
+                "timer"
+            ],
+            "time": "2019-03-27T18:10:32+00:00"
+        },
+        {
+            "name": "react/socket",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/socket.git",
+                "reference": "97522e24987365e1ed873f0f4884900747a668e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/socket/zipball/97522e24987365e1ed873f0f4884900747a668e0",
+                "reference": "97522e24987365e1ed873f0f4884900747a668e0",
+                "shasum": ""
+            },
+            "require": {
+                "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
+                "php": ">=5.3.0",
+                "react/dns": "^1.1",
+                "react/event-loop": "^1.0 || ^0.5",
+                "react/promise": "^2.6.0 || ^1.2.1",
+                "react/promise-timer": "^1.4.0",
+                "react/stream": "^1.1"
+            },
+            "require-dev": {
+                "clue/block-react": "^1.2",
+                "phpunit/phpunit": "^7.5 || ^6.4 || ^5.7 || ^4.8.35",
+                "react/promise-stream": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Socket\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Async, streaming plaintext TCP/IP and secure TLS socket server and client connections for ReactPHP",
+            "keywords": [
+                "Connection",
+                "Socket",
+                "async",
+                "reactphp",
+                "stream"
+            ],
+            "time": "2020-03-12T12:15:14+00:00"
+        },
+        {
+            "name": "react/stream",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/stream.git",
+                "reference": "7c02b510ee3f582c810aeccd3a197b9c2f52ff1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/stream/zipball/7c02b510ee3f582c810aeccd3a197b9c2f52ff1a",
+                "reference": "7c02b510ee3f582c810aeccd3a197b9c2f52ff1a",
+                "shasum": ""
+            },
+            "require": {
+                "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
+                "php": ">=5.3.8",
+                "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3.5"
+            },
+            "require-dev": {
+                "clue/stream-filter": "~1.2",
+                "phpunit/phpunit": "^7.0 || ^6.4 || ^5.7 || ^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Stream\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Event-driven readable and writable streams for non-blocking I/O in ReactPHP",
+            "keywords": [
+                "event-driven",
+                "io",
+                "non-blocking",
+                "pipe",
+                "reactphp",
+                "readable",
+                "stream",
+                "writable"
+            ],
+            "time": "2020-05-04T10:17:57+00:00"
+        },
+        {
             "name": "scrivo/highlight.php",
             "version": "v9.18.1.1",
             "source": {
@@ -5586,6 +6247,65 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03T07:35:21+00:00"
+        },
+        {
+            "name": "supliu/laravel-query-monitor",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/supliu/laravel-query-monitor.git",
+                "reference": "f48142bdf017679862ee3205bbc2750bed6c7352"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/supliu/laravel-query-monitor/zipball/f48142bdf017679862ee3205bbc2750bed6c7352",
+                "reference": "f48142bdf017679862ee3205bbc2750bed6c7352",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.6|^6|^7",
+                "php": "^7.2.5",
+                "react/socket": "^1.4"
+            },
+            "require-dev": {
+                "orchestra/testbench": "5.*",
+                "phpunit/phpunit": "^9.2@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Supliu\\LaravelQueryMonitor\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Supliu\\LaravelQueryMonitor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jansen Felipe",
+                    "email": "jansen.felipe@gmail.com"
+                }
+            ],
+            "description": "Laravel Query Monitor",
+            "keywords": [
+                "eloquent",
+                "laravel",
+                "monitor",
+                "query",
+                "sql"
+            ],
+            "time": "2020-05-02T05:19:05+00:00"
         },
         {
             "name": "symfony/debug",

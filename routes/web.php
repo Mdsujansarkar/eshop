@@ -86,3 +86,15 @@ Route::get(  '/publish/product/{id}',          'ProductController@publishedProdu
 Route::get(  '/product/edit/{id}',             'ProductController@editProduct')           ->name( 'edit-product' );
 Route::post( '/product/update/',               'ProductController@updateProduct')         ->name( 'update-product' );
 Route::get(  '/product/delete/{id}',           'ProductController@deleteProduct')         ->name( 'delete-product' );
+
+/**
+ * Order Manage
+ */
+Route::get( '/manage/order',				   'OrderController@manageOrder')			  ->name( 'manage-order' );
+Route::get( '/manage/view/order/{id}',		   'OrderController@viewOrder')			  	  ->name( 'view-order-details' );
+Route::get( '/manage/view/invoicce/{id}',	   'OrderController@orderInvoice')			  ->name( 'order-invoice' );
+Route::get( '/manage/view/download/{id}',	   'OrderController@orderDownload')			  ->name( 'order-download' );
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
