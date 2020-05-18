@@ -310,7 +310,7 @@ CREATE TABLE `products` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -322,6 +322,12 @@ LOCK TABLES `products` WRITE;
 INSERT INTO `products` VALUES (1,'test hello',1,1,234.00,342,'ডেলিভারি করছে। সাধারণত নেক্সট ডে করা হলেও এখন কিছু কিছু এরিয়া তে নেক্সট ডে পসিবল হচ্ছে না। তবে সেটা খুব সীমিত। ওয়েবসাইট :\r\nডেলিভারি করছে। সাধারণত নেক্সট ডে করা হলেও এখন কিছু কিছু এরিয়া তে নেক্সট ডে পসিবল হচ্ছে না। তবে সেটা খুব সীমিত। ওয়েবসাইট :','ডেলিভারি করছে। সাধারণত নেক্সট ডে করা হলেও এখন কিছু কিছু এরিয়া তে নেক্সট ডে পসিবল হচ্ছে না। তবে সেটা খুব সীমিত। ওয়েবসাইট :','product-imags/2.jpg',1,'2020-04-27 20:46:23','2020-04-27 20:46:23');
 INSERT INTO `products` VALUES (2,'What is Lorem Ipsum?',1,2,855.00,56,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley','product-imags/3.jpg',1,'2020-04-27 20:48:15','2020-04-27 20:48:15');
 INSERT INTO `products` VALUES (3,'computer',1,1,853.00,78,'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham','The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham','product-imags/5.jpg',1,'2020-04-27 20:49:17','2020-04-27 20:49:17');
+INSERT INTO `products` VALUES (4,'Kangaro Stapler Pin',1,2,56.00,5,'orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy','orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy','product-imags/bus.jpg',1,'2020-05-18 05:24:53','2020-05-18 05:24:53');
+INSERT INTO `products` VALUES (5,'Casio Calculator',1,1,89.00,65,'here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected','here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected','product-imags/2.jpg',1,'2020-05-18 05:33:30','2020-05-18 05:33:30');
+INSERT INTO `products` VALUES (6,'Qarshi Jam e Shirin',1,2,89.00,458,'here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected','here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected','product-imags/5.jpg',1,'2020-05-18 05:55:03','2020-05-18 05:55:03');
+INSERT INTO `products` VALUES (7,'PYREX',1,2,58.00,55,'here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected','here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected','product-imags/3.jpg',1,'2020-05-18 05:57:11','2020-05-18 05:57:11');
+INSERT INTO `products` VALUES (8,'Pack Of 5',2,1,99.00,55,'here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected','here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected','product-imags/5.jpg',1,'2020-05-18 05:58:02','2020-05-18 05:58:02');
+INSERT INTO `products` VALUES (9,'Royal Victoria Melamine Large Serving Bowls',1,2,56.00,56,'Royal Victoria Melamine Large Serving BowlsRoyal Victoria Melamine Large Serving Bowls','Royal Victoria Melamine Large Serving BowlsRoyal Victoria Melamine Large Serving Bowls','product-imags/3.jpg',1,'2020-05-18 05:59:56','2020-05-18 05:59:56');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -402,4 +408,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-12 23:18:44
+-- Dump completed on 2020-05-18 18:50:56
