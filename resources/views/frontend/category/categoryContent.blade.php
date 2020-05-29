@@ -31,27 +31,10 @@
 										<div class="snipcart-item block">
 											<div class="snipcart-thumb">
 												<a href="{{ route('productsDetaiils', ['id' =>$categoryProduct->id, 'name' => $categoryProduct->product_name])}}">
-													<img title=" " height="300" width="250" src="{{asset($categoryProduct->product_image)}}"></a>		
+													<img title=" " height="300" width="350" src="{{asset($categoryProduct->product_image)}}"></a>		
 												<p>{{$categoryProduct->product_name}}</p>
-												<h4>{{$categoryProduct->product_price}} <span>$55.00</span></h4>
+												<h4>Price: {{$categoryProduct->product_price}} Tk</h4>
 											</div>
-											<div class="snipcart-details top_brand_home_details">
-												<form action="#" method="post">
-													<fieldset>
-														<input type="hidden" name="cmd" value="_cart">
-														<input type="hidden" name="add" value="1">
-														<input type="hidden" name="business" value=" ">
-														<input type="hidden" name="item_name" value="Fortune Sunflower Oil">
-														<input type="hidden" name="amount" value="35.99">
-														<input type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
-														<input type="hidden" name="return" value=" ">
-														<input type="hidden" name="cancel_return" value=" ">
-														<input type="submit" name="submit" value="Add to cart" class="button">
-													</fieldset>
-												</form>
-											</div>
-										</div>
 									</figure>
 								</div>
 							</div>

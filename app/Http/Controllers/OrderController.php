@@ -70,7 +70,7 @@ class OrderController extends Controller
     }
     public function ordersearch(Request $request)
     {
-      $q = $request::get ( 'q' );
+      $q = $request->q;
     $user = Product::where ( 'product_name', 'LIKE', '%' . $q . '%' )->get ();
     return view('frontend.order.search',['user'=>$user])->withDetails($user)->withQuery ( $q );
     }

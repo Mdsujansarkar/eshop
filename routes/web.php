@@ -96,7 +96,7 @@ Route::get( '/manage/view/invoicce/{id}',	   'OrderController@orderInvoice')			 
 Route::get( '/manage/view/download/{id}',	   'OrderController@orderDownload')			  ->name( 'order-download' );
 
 
-Route::any( '/search/product',                 'OrderController@ordersearch')             ->name('product-search');
+Route::get( '/search/product',                 'OrderController@ordersearch')             ->name('product-search');
 
 Auth::routes();
 

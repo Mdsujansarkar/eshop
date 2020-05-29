@@ -55,11 +55,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="agileits_header">
         <div class="container">
             <div class="w3l_offers">
-                <p>SALE UP TO 70% OFF. USE CODE "SALE70%" . <a href="products.html">SHOP NOW</a></p>
+                <p>SALE UP TO 70% OFF. USE CODE "SALE70%" . <a href="{{ url('/')}}">SHOP NOW</a></p>
             </div>
             <div class="agile-login">
                 <ul>
-                    <li><a href="registered.html"> Create Account </a></li>
+                    <li><a href="{{route('new-customer-login')}}"> Create Account </a></li>
                         @if(Session::get('customrId'))
                     <li><a href="#" onclick="document.getElementById('customerLogotFrom').submit(); " >Logout</a></li>
                     <form id="customerLogotFrom"  action="{{route('customer-logout')}}" method="post">
@@ -91,7 +91,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="w3l_search">
 
-                <form action="{{route('product-search')}}" method="post">
+                <form action="{{route('product-search')}}" method="get">
                   @csrf
                     <input type="search" name="q" placeholder="Search for a Product..." required="">
                     <button type="submit" class="btn btn-default search" aria-label="Left Align">
