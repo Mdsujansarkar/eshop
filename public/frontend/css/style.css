@@ -3391,3 +3391,8 @@ td.invert-image a img {
     font-size: 13px;
 }
 }
+.column div.agile_top_brand_left_grid {
+    position: relative;
+    margin-top: 27px;
+    height: 543px;
+}

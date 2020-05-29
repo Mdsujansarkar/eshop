@@ -30,30 +30,15 @@
                                 </div>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Household<b class="caret"></b></a>
-                            <ul class="dropdown-menu multi-column columns-3">
-                                <div class="row">
-                                    <div class="multi-gd-img">
-                                        <ul class="multi-column-dropdown">
-                                            <h6>All Household</h6>
-                                            <li><a href="household.html">Cookware</a></li>
-                                            <li><a href="household.html">Dust Pans</a></li>
-                                            <li><a href="household.html">Scrubbers</a></li>
-                                            <li><a href="household.html">Dust Cloth</a></li>
-                                            <li><a href="household.html"> Mops </a></li>
-                                            <li><a href="household.html">Kitchenware</a></li>
-                                        </ul>
-                                    </div>
-
-
-                                </div>
-                            </ul>
+                      
+                        @foreach( $categories as $categoriy )
+                        <li>
+                            <a href="{{ route( 'category-content', ['id' => $categoriy->id] ) }}">
+                                {{$categoriy->category_name}}
+                            </a>
                         </li>
-                   
+                         @endforeach
                         <li><a href="gourmet.html">Gourmet</a></li>
-                        <li><a href="offers.html">Offers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>

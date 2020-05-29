@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 use App\Order;
 use App\Customer;
@@ -71,6 +72,6 @@ class OrderController extends Controller
     {
       $q = $request::get ( 'q' );
     $user = Product::where ( 'product_name', 'LIKE', '%' . $q . '%' )->get ();
-    return view('frontend.order.search',['user'=>$user]);
+    return view('frontend.order.search',['user'=>$user])->withDetails($user)->withQuery ( $q );
     }
 }
