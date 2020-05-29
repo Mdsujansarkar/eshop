@@ -12,32 +12,29 @@
                 </ul>
             </div>
             <div class="col-md-3 w3_footer_grid">
-                <h3>Information</h3>
+                <h3>Category</h3>
                 <ul class="info">
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="about.html">About Us</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="contact.html">Contact Us</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="short-codes.html">Short Codes</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="faq.html">FAQ's</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Special Products</a></li>
+                    
+                     @foreach( $categories as $categoriy )
+                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{ route( 'category-content', ['id' => $categoriy->id] ) }}">{{$categoriy->category_name}}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <div class="col-md-3 w3_footer_grid">
-                <h3>Category</h3>
+                <h3>Brands</h3>
                 <ul class="info">
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="groceries.html">Groceries</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="household.html">Household</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="personalcare.html">Personal Care</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="packagedfoods.html">Packaged Foods</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="beverages.html">Beverages</a></li>
+                @foreach ($brands as $brand )
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i>{{$brand->brand_name}}</li>
+                @endforeach
+                    
                 </ul>
             </div>
             <div class="col-md-3 w3_footer_grid">
                 <h3>Profile</h3>
                 <ul class="info">
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Store</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="checkout.html">My Cart</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="login.html">Login</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="registered.html">Create Account</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{route('add-to-show')}}">My Cart</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{route('new-customer-login')}}">Login</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{route('new-customer-login')}}">Create Account</a></li>
                 </ul>
             </div>
             <div class="clearfix"> </div>

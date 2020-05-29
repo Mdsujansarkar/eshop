@@ -41,7 +41,7 @@ Route::get(	 '/order/complite',					'CheckOutController@orderComplite')		 ->name
 // Route::post( '/checkout/shipping',				'CheckOutController@customerLogin')		 ->name( 'login-info-customer' );
 Route::post( '/checkout/customer/login',        'CheckOutController@customerLogin')		 ->name( 'customer-login' );
 Route::post( '/customer/logout',				'CheckOutController@customerLogout')	 ->name( 'customer-logout' );
-Route::get(  '/customer/login',					'CheckOutController@customerLoginNew')	 	 ->name( 'new-customer-login' );
+Route::get(  '/customer/login',					'CheckOutController@customerLoginNew')	 ->name( 'new-customer-login' );
 
 // Route::post( '/checkout/shipping',			    'CheckOutController@customerShopping')	 ->name( 'new-shipping-info' );
 

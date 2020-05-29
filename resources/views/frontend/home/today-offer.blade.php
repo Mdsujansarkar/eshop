@@ -13,13 +13,7 @@
                                         <img title="{{ $todayProduct ->product_name}}" alt=" "  height="300" width="250" src="{{asset($todayProduct->product_image)}}" />
                                     </a>
                                     <p>{{ $todayProduct ->product_name}}</p>
-                                    <div class="stars">
-                                        <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star gray-star" aria-hidden="true"></i>
-                                    </div>
+                                
                                     <h4>Price (TK.) : {{ $todayProduct ->product_price}}</h4>
                                 </div>
                                 <div class="snipcart-details top_brand_home_details">
