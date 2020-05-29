@@ -52,6 +52,11 @@ Route::get(  '/customer/login',					'CheckOutController@customerLoginNew')	 ->na
 Route::get(  '/admin',                          'AdminController@index' );
 
 /**
+ * Admin blick add 
+ */
+Route::get(  '/admin/login',                    'AdminController@login' );
+
+/**
  * Add categorie
  */
 Route::get(  '/category/add',                  'CategoryController@index' )               ->name( 'add-category' );
@@ -97,6 +102,15 @@ Route::get( '/manage/view/download/{id}',	   'OrderController@orderDownload')			
 
 
 Route::get( '/search/product',                 'OrderController@ordersearch')             ->name('product-search');
+
+
+
+
+
+
+
+
+
 
 Auth::routes();
 
