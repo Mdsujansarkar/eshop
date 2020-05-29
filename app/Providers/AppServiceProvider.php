@@ -28,5 +28,9 @@ class AppServiceProvider extends ServiceProvider
         {
             $view->with('categories', Category::where( 'publication_status', 1 )->get());
         });
+
+        View::composer('frontend.category.categoryMenu', function ($view) {
+            $view->with('categories', Category::where('publication_status', 1)->get());
+        });
     }
 }

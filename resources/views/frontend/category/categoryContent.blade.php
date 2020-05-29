@@ -3,14 +3,7 @@
 @section('home')
 
 <!-- breadcrumbs -->
-	<div class="breadcrumbs">
-		<div class="container">
-			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">Beverages</li>
-			</ol>
-		</div>
-	</div>
+	
 <!-- //breadcrumbs -->
 <!--- beverages --->
 	<div class="products">
@@ -43,9 +36,7 @@
 					@endforeach
 						<div class="clearfix"> </div>
 				</div>
-			
-				
-				@include('frontend.category.pagination')
+			 {{$categoryProducts->links()}}
 			</div>
 			<div class="clearfix"> </div>
 		</div>

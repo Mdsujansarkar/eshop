@@ -1,7 +1,9 @@
 	<div class="categories">
 					<h2>Categories</h2>
 					<ul class="cate">
-					
-						<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Fruits And Vegetables</a></li>
+
+					@foreach( $categories as $categoriy )
+                    	<li><a href="{{ route( 'category-content', ['id' => $categoriy->id] ) }}"><i class="fa fa-arrow-right" aria-hidden="true"></i>{{$categoriy->category_name}}</a></li>
+                    @endforeach
 					</ul>
 				</div>	

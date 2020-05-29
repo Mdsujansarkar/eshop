@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
     	$categoryProducts  = Product::where('category_id', $id)
     					  ->where('publication_status', 1)
-    					  ->get();
+    					  ->paginate(6);
     	return view('frontend.category.categoryContent', ['categoryProducts' => $categoryProducts]);
 
     }
