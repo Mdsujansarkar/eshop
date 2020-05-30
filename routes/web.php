@@ -55,6 +55,7 @@ Route::get(  '/admin',                          'AdminController@index' );
  * Admin blick add 
  */
 Route::get(  '/admin/login',                    'AdminController@login' );
+Route::get(  '/admin/registration',             'AdminController@registration');
 
 /**
  * Add categorie

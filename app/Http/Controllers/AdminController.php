@@ -14,4 +14,8 @@ class AdminController extends Controller
     {
         return view( 'backend.auth.login');
     }
+    public function registration()
+    {
+        return view( 'backend.auth.register');
+    }
 }
