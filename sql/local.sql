@@ -138,7 +138,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -147,17 +147,17 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (39,'2014_10_12_000000_create_users_table',1);
-INSERT INTO `migrations` VALUES (40,'2014_10_12_100000_create_password_resets_table',1);
-INSERT INTO `migrations` VALUES (41,'2019_08_19_000000_create_failed_jobs_table',1);
-INSERT INTO `migrations` VALUES (42,'2020_04_10_114555_creat_categories_table',1);
-INSERT INTO `migrations` VALUES (43,'2020_04_11_060428_creat_brands_table',1);
-INSERT INTO `migrations` VALUES (44,'2020_04_14_104141_create_products_table',1);
-INSERT INTO `migrations` VALUES (45,'2020_04_26_132746_create_customers_table',1);
-INSERT INTO `migrations` VALUES (46,'2020_04_27_113704_create_shoppings_table',1);
-INSERT INTO `migrations` VALUES (47,'2020_04_27_140208_create_orders_table',1);
-INSERT INTO `migrations` VALUES (48,'2020_04_27_141314_create_payments_table',1);
-INSERT INTO `migrations` VALUES (49,'2020_04_27_142040_create_orders_details_table',1);
+INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1);
+INSERT INTO `migrations` VALUES (2,'2014_10_12_100000_create_password_resets_table',1);
+INSERT INTO `migrations` VALUES (3,'2019_08_19_000000_create_failed_jobs_table',1);
+INSERT INTO `migrations` VALUES (4,'2020_04_10_114555_creat_categories_table',1);
+INSERT INTO `migrations` VALUES (5,'2020_04_11_060428_creat_brands_table',1);
+INSERT INTO `migrations` VALUES (6,'2020_04_14_104141_create_products_table',1);
+INSERT INTO `migrations` VALUES (7,'2020_04_26_132746_create_customers_table',1);
+INSERT INTO `migrations` VALUES (8,'2020_04_27_113704_create_shoppings_table',1);
+INSERT INTO `migrations` VALUES (9,'2020_04_27_140208_create_orders_table',1);
+INSERT INTO `migrations` VALUES (10,'2020_04_27_141314_create_payments_table',1);
+INSERT INTO `migrations` VALUES (11,'2020_04_27_142040_create_orders_details_table',1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -351,7 +351,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`),
   UNIQUE KEY `users_phone_number_unique` (`phone_number`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -360,8 +360,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Sujan Miya','liton123sarkar@gmail.com',NULL,'35353845','$2y$10$ZozZampp/75S5yszSG113eIaxLX6KoBILhGFRyUt29R31S5Sg4m/2',NULL,'2020-05-30 00:01:59','2020-05-30 00:01:59');
-INSERT INTO `users` VALUES (2,'Sujan Miya','ahasanshah@dapk.site',NULL,'7979787596','$2y$10$sR8xA/.el5Lc32GElsw30OheidWCxNUXmEJXNc98NctzO5uyxd5d2',NULL,'2020-05-30 00:03:37','2020-05-30 00:03:37');
+INSERT INTO `users` VALUES (1,'Sujan Miya','liton123sarkar@gmail.com',NULL,'53456465','$2y$10$tCBKrr1ByW12jAYL8R0.IuOZMjSCxCP57XctaUNI6q/tPgPA7C7Ce',NULL,'2020-05-30 07:51:06','2020-05-30 07:51:06');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -374,4 +373,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-30 12:48:10
+-- Dump completed on 2020-05-30 20:32:44

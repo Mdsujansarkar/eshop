@@ -54,10 +54,10 @@ Route::get(  '/admin',                          'AdminController@index' );
 /**
  * Admin blick add 
  */
-Route::get(  '/admin/login',                    'AdminController@login' );
-Route::post( '/main/login',                     'AdminController@mainLogin')              ->name('mainlogin');
-Route::get(  '/admin/registration',             'AdminController@registration');
-Route::post( '/registrations/',                 'AdminController@register')               ->name('aregister');
+Route::get(  '/login',                          'AdminController@login' );
+Route::post( '/login',                          'AdminController@mainLogin')              ->name('login');
+Route::get(  '/register',                       'AdminController@registration');
+Route::post('/register',                        'AdminController@register')               ->name('register');
 
 /**
  * Add categorie

@@ -13,11 +13,11 @@ class AdminController extends Controller
     }
     public function login()
     {
-        return view( 'backend.auth.login');
+        return view( 'auth.login');
     }
     public function registration()
     {
-        return view( 'backend.auth.register');
+        return view( 'auth.register');
     }
     public function register(Request $request)
     {
@@ -47,6 +47,19 @@ class AdminController extends Controller
 
     public function mainLogin(Request $requst)
     {
-        echo "hello";
+        $this->validate( $requst,[
+            'email'              => 'required|email',
+            'password'           => 'required|min:6',
+        ]);
+        $cradiantial = $requst->except(['_token']);
+        if(auth()->attempt($cradiantial))
+        {
+    
+            return redirect()->route('/admin');
+        }
+        session()->flash('message', 'Account Create successfully');
+        session()->flash('type', 'success');
+
+        return redirect()->back();
     }
 }
