@@ -18,25 +18,40 @@
         <div class="row justify-content-center">
             <div class="col-lg-5">
                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Registration</h3></div>
+                    <div class="card-header">
+                    <h3 class="text-center font-weight-light my-4">Registration</h3>
+                    </div>
                     <div class="card-body">
-                        <form action="{{ route('register')}}" mathod="post">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                        <form action="{{ route('aregister')}}" method="post">
                         @csrf
                             <div class="form-group">
                                 <label class="small mb-1" for="name">Name</label>
-                                <input class="form-control py-4" name="name" id="name" type="text" placeholder="Enter Your Name" />
+                                <input class="form-control py-4" name="name" id="name" type="text" placeholder="Enter Your Name" value="{{old('name')}}" />
                             </div>
                                 <div class="form-group">
                                 <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                <input class="form-control py-4" name="email" id="inputEmailAddress" type="email" placeholder="Enter email address" />
+                                <input class="form-control py-4" name="email" id="inputEmailAddress" type="email" placeholder="Enter email address" value="{{old('email')}}" />
                             </div>
                             <div class="form-group">
                                 <label class="small mb-1" for="inputphone">Phone Number</label>
-                                <input class="form-control py-4" id="inputphone" name="phone_number" type="text" placeholder="Enter email address" />
+                                <input class="form-control py-4" id="inputphone" name="phone_number" type="text" placeholder="Enter phone number" value="{{old('phone_number')}}" />
                             </div>
 
                             <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label>
-                            <input class="form-control py-4" name="password" id="inputPassword" type="password" placeholder="Enter password" /></div>
+                            <input class="form-control py-4" name="password" id="inputPassword" type="password" placeholder="Enter password" />
+                            </div>
+                            <div class="form-group"><label class="small mb-1" for="inputPassword">Confarm Password</label>
+                            <input class="form-control py-4" name="password_confirmation" id="inputPassword" type="password" placeholder="Enter password" />
+                            </div>
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox">
                                 <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
@@ -44,7 +59,8 @@
                             </div>
                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                             <a class="small" href="password.html">Forgot Password?</a>
-                            <a class="btn btn-primary" href="index.html">Login</a>
+                        
+                            <input type="submit" class="btn btn-primary" value="Register" name="btn" />
                             </div>
                         </form>
                     </div>

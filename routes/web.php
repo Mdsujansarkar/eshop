@@ -56,6 +56,7 @@ Route::get(  '/admin',                          'AdminController@index' );
  */
 Route::get(  '/admin/login',                    'AdminController@login' );
 Route::get(  '/admin/registration',             'AdminController@registration');
+Route::post( '/registrations/',                 'AdminController@register')->name('aregister');
 
 /**
  * Add categorie
