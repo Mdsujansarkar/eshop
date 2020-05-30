@@ -23,7 +23,7 @@ class AdminController extends Controller
     {
         $this ->validate( $request,[
             'name'               => 'required',
-            'email'              => 'required|email',
+            'email'              => 'required|email|unique:users,email',
             'phone_number'       => 'required|min:6|max:13',
             'password'           => 'required|confirmed|min:6',
             
@@ -42,15 +42,11 @@ class AdminController extends Controller
             session()->flash('message', $e->getMessage());
             session()->flash('type', 'danger');
             return redirect()->back();
-        }
-        // $user       = new User();
-        // $user->name          = $request->name;
-        // $user->email         = strtolower($request->email);
-        // $user->phone_number  = $request->phone_number;
-        // $user->password      = bcrypt($request->password);
-        // $user->save();
-        
-        // return redirect('/admin/login')->with('message','Account create');
-       
+        } 
+    }
+
+    public function mainLogin(Request $requst)
+    {
+        echo "hello";
     }
 }

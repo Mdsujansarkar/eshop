@@ -31,6 +31,13 @@
                             </ul>
                         </div>
                     @endif
+
+                    @if(Session::has('message'))
+                    <div class="alert {{ Session::get('alert-class', 'alert-info') }}">
+                    {{ Session::get('message') }}
+                    </div>
+                    @endif
+
                         <form action="{{ route('aregister')}}" method="post">
                         @csrf
                             <div class="form-group">
@@ -65,7 +72,7 @@
                         </form>
                     </div>
                     <div class="card-footer text-center">
-                        <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
+                        <div class="small"><a href="{{url('/admin/login')}}">Need an account? Sign up!</a></div>
                     </div>
                 </div>
             </div>
