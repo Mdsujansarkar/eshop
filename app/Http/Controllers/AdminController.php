@@ -37,7 +37,7 @@ class AdminController extends Controller
             $user->save();
             session()->flash('message', 'Account Create successfully');
             session()->flash('type', 'success');
-            return redirect('/admin/login');
+            return redirect('/login');
         } catch (\Exception $e) {
             session()->flash('message', $e->getMessage());
             session()->flash('type', 'danger');

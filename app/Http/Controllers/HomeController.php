@@ -37,4 +37,9 @@ class HomeController extends Controller
     	$product = Product::find($id);
     	return view('frontend.category.productDetail', ['product' => $product]);
     }
+
+    public function backand()
+    {
+        return view('backend.home.home');
+    }
 }
